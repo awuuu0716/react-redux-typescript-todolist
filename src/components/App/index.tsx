@@ -1,14 +1,10 @@
 import React, { FormEventHandler, useCallback, useState } from 'react';
 
-interface HelloProps {
-  name: string;
-}
 interface TodoData {
   id: number;
   content: string;
   isDone: boolean;
 }
-let id = 0;
 
 const TodoList: React.FC<{
   todos: TodoData[];
@@ -31,6 +27,12 @@ const TodoList: React.FC<{
     </div>
   );
 };
+
+interface HelloProps {
+  name: string;
+}
+
+let id = 0;
 
 const App = (props: HelloProps) => {
   const [todos, setTodos] = useState<TodoData[]>([]);
@@ -81,7 +83,6 @@ const App = (props: HelloProps) => {
         setIsEditing(true);
         setEditId(id);
       }
-      
     },
     [todos]
   );
