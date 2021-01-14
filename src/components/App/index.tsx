@@ -8,13 +8,8 @@ import {
   selectTodos,
   selectEditId,
   changeEditId,
+  TodoData,
 } from 'redux/reducer/todoSlice';
-
-interface TodoData {
-  id: number;
-  content: string;
-  isDone: boolean;
-}
 
 const TodoList: React.FC<{
   todos: TodoData[];
